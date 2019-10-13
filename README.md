@@ -3,10 +3,12 @@ hash相关操作函数：https://www.iteye.com/blog/357029540-2389045
 
 任务队列的一种简单使用：
 
+
+  
   //1.付款完成后，会根据用户的收货地址和商家的发货地址 生成一个队列（任务）
+  
     public void listQueueInit(String cardId){
         String key ="prod:"+cardId;// 初始化的KEY 待有多少任务要完成
-
         list.leftPushAll(key,"1商家发货","2小哥发货","3北京海定区某小区--》首都机场","4北京机场--》南京机场","5机场-->建邺区","建邺区--》");
 
     }
