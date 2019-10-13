@@ -32,6 +32,7 @@ public class RedisController {
         user.setUsername("beifeng");
         user.setPassword("root");
         user.setName("锋哥");
+        //需要注意：普通的连接对象没有办法吧Java对象直接存入到Redis，需要我们进行对象的序列化，然后使用Redis进行存储，而下面取回序列化的内容后，在通过转换变为Java对象。
         redisTemplate.opsForValue().set("beifeng", JSONObject.toJSONString(user)); //使用的是fastJSON
     }
 
