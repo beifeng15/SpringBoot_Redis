@@ -15,7 +15,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 
-/**
+/**注意：jackson是根据反射获取model的属性和get/set方法，序列化的顺序为字段、方法(get/set)，默认只序列化public修饰的字段和public修饰的get/set方法。
  * @Description TODO
  * @Author Mr.Wu
  * @Date 2019/10/10 10:50
